@@ -1,0 +1,56 @@
+{
+	"name": "vs-code-ext-sf_org_open_browser",
+	"publisher": "chrisgit",
+	"version": "0.0.1",
+	"description": "Open a Salesforce Org in a user specified browser",
+	"displayName": "sfdx-open-org-browser",
+	"author": "Chris Sullivan",
+	"license": "SEE LICENSE IN RuntimeLicenses/license.txt",
+	"bugs": {
+		"url": "https://github.com/chrisgit/vs-code-ext-sf_org_open_browser/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chrisgit/vs-code-ext-sf_org_open_browser.git"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"Salesforce",
+		"SFDX"
+	],
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"activationEvents": [
+		"onCommand:extension.sfdx-chrisgit-org-open"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.sfdx-chrisgit-org-open",
+				"title": "SFDX: Open Org in a Browser (chrisgit)"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^8.10.25",
+		"opn": "^5.4.0",
+		"tslint": "^5.8.0",
+		"typescript": "^3.1.4",
+		"vscode": "^1.1.25"
+	},
+	"dependencies": {
+		"opn": "^5.4.0"
+	}
+}
